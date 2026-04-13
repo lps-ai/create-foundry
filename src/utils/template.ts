@@ -1,12 +1,10 @@
-import { downloadTemplate } from "giget"
+import { downloadTemplate as gigetDownload } from "giget"
 import { TEMPLATE_REPO } from "../constants.js"
 import { getGitHubToken } from "./auth.js"
 
-export async function downloadScaffoTemplate(
-  targetDir: string,
-): Promise<string> {
+export async function downloadTemplate(targetDir: string): Promise<string> {
   const token = getGitHubToken()
-  const { dir } = await downloadTemplate(TEMPLATE_REPO, {
+  const { dir } = await gigetDownload(TEMPLATE_REPO, {
     dir: targetDir,
     auth: token,
     install: false,

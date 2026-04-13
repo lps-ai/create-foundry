@@ -27,7 +27,7 @@ export async function renameProject(
   const readmePath = join(projectDir, "README.md")
   const readme = `# ${projectName}
 
-Built with [scaffo](https://github.com/typerobot/scaffo) — an opinionated SaaS starter kit.
+Built with [Aideas Foundry](https://github.com/lps-ai/aideas-foundry) — an opinionated SaaS starter kit.
 
 ## Getting Started
 

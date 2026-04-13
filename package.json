@@ -1,10 +1,10 @@
 {
-  "name": "create-scaffo",
+  "name": "create-aideas-foundry",
   "version": "0.1.0",
-  "description": "Create new scaffo SaaS projects",
+  "description": "Create new Aideas Foundry SaaS projects",
   "type": "module",
   "bin": {
-    "create-scaffo": "./dist/index.js"
+    "create-aideas-foundry": "./dist/index.js"
   },
   "files": [
     "dist"

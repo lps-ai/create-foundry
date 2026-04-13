@@ -1,4 +1,4 @@
-export const TEMPLATE_REPO = "github:typerobot/scaffo"
+export const TEMPLATE_REPO = "github:lps-ai/aideas-foundry"
 
 export const FILES_TO_REMOVE = [
   // CI/automation (belongs to template repo, not user's project)

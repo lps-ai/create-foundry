@@ -8,15 +8,15 @@ import {
   checkPnpmAvailable,
   checkGitAvailable,
 } from "./utils/preflight.js"
-import { downloadScaffoTemplate } from "./utils/template.js"
+import { downloadTemplate } from "./utils/template.js"
 import { cleanupTemplateFiles } from "./utils/cleanup.js"
 import { renameProject } from "./utils/rename.js"
 
 const main = defineCommand({
   meta: {
-    name: "create-scaffo",
+    name: "create-aideas-foundry",
     version: "0.1.0",
-    description: "Create a new scaffo SaaS project",
+    description: "Create a new Aideas Foundry SaaS project",
   },
   args: {
     name: {
@@ -40,12 +40,12 @@ const main = defineCommand({
       process.exit(1)
     }
 
-    consola.box("Scaffo — SaaS Starter Kit")
+    consola.box("Aideas Foundry — SaaS Starter Kit")
 
     // 1. Download template
-    consola.start("Downloading scaffo template...")
+    consola.start("Downloading Aideas Foundry template...")
     try {
-      await downloadScaffoTemplate(targetDir)
+      await downloadTemplate(targetDir)
       consola.success("Template downloaded")
     } catch (error) {
       consola.error("Failed to download template:", (error as Error).message)
@@ -83,7 +83,7 @@ const main = defineCommand({
       spawnSync("git", ["add", "-A"], { cwd: targetDir, stdio: "pipe" })
       const gitCommit = spawnSync(
         "git",
-        ["commit", "-m", "Initial commit from scaffo"],
+        ["commit", "-m", "Initial commit from Aideas Foundry"],
         { cwd: targetDir, stdio: "pipe" },
       )
       if (gitCommit.status === 0) {
@@ -101,7 +101,7 @@ const main = defineCommand({
     // 6. Print next steps
     console.log("")
     consola.box(
-      `Done! Your scaffo project "${projectName}" is ready.\n\n` +
+      `Done! Your Aideas Foundry project "${projectName}" is ready.\n\n` +
         `Next steps:\n` +
         `  cd ${projectName}\n` +
         `  cp .env.example .env        # Edit with your settings\n` +
