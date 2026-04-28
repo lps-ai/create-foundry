@@ -14,7 +14,7 @@ import { renameProject } from "./utils/rename.js"
 
 const main = defineCommand({
   meta: {
-    name: "create-aideas-foundry",
+    name: "create-foundry",
     version: "0.1.0",
     description: "Create a new Aideas Foundry SaaS project",
   },

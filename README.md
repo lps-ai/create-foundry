@@ -1,13 +1,13 @@
-# create-aideas-foundry
+# create-foundry
 
 Create new Aideas Foundry SaaS projects from the command line.
 
 ## Usage
 
 ```bash
-npx create-aideas-foundry my-app
+npx create-foundry my-app
 # or
-npm create aideas-foundry my-app
+npm create foundry my-app
 ```
 
 ## Prerequisites
